@@ -1,4 +1,4 @@
-# Franco Irusta | CV Online
+# Franco B. Irusta | CV Online
 
 Proyecto Django para publicar un currículum vitae profesional en formato web, con enfoque en IT Support y QA Manual.
 
