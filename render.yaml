@@ -3,7 +3,7 @@ services:
     name: cv-online-franco
     runtime: python
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input
-    startCommand: python manage.py migrate && gunicorn config.wsgi:application
+    startCommand: python manage.py migrate --noinput && gunicorn config.wsgi:application
     envVars:
       - key: SECRET_KEY
         generateValue: true
