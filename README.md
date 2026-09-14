@@ -47,21 +47,3 @@ project/
 ├── media/
 ├── db.sqlite3
 └── .env.example
-```
-
-## Deploy
-
-Este proyecto está preparado para desplegarse en un servicio compatible con Django/Python. Para una versión pública, se recomienda:
-
-- Render
-- Railway
-- PythonAnywhere
-- DigitalOcean App Platform
-- VPS con Gunicorn + Nginx
-
-No se recomienda GitHub Pages para ejecutar Django, ya que no sirve para aplicaciones Python.
-
-## Importante
-- No se sube la base de datos con información sensible.
-- No se suben secretos ni claves.
-- Se usa `.env` para variables de entorno.
