@@ -16,6 +16,7 @@ venv/
 # Django
 *.egg-info/
 media/
+staticfiles/
 
 # OS
 .DS_Store
