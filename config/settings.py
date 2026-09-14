@@ -8,7 +8,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-dev-key")
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+configured_hosts = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+render_hostname = os.getenv("RENDER_EXTERNAL_HOSTNAME")
+ALLOWED_HOSTS = [host.strip() for host in configured_hosts if host.strip()]
+if render_hostname and render_hostname not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(render_hostname)
 
 INSTALLED_APPS = [
     "django.contrib.admin",
