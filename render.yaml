@@ -10,6 +10,6 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: "cv-online-franco.onrender.com"
+        value: "cv-online-7gpz.onrender.com"
       - key: CSRF_TRUSTED_ORIGINS
-        value: "https://cv-online-franco.onrender.com"
+        value: "https://cv-online-7gpz.onrender.com"
