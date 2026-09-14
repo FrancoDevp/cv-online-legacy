@@ -35,7 +35,7 @@ class SiteConfig(models.Model):
         verbose_name="LinkedIn",
     )
     github_url = models.URLField(
-        default="https://github.com/",
+        default="https://github.com/FrancoIrusta",
         verbose_name="GitHub",
     )
     cv_pdf = models.FileField(
@@ -61,7 +61,8 @@ class Experience(models.Model):
         verbose_name="Período",
         help_text="Ejemplo: 2023 - 2024",
     )
-    description = models.TextField(verbose_name="Descripción breve", blank=True)
+    description = models.TextField(
+        verbose_name="Descripción breve", blank=True)
     responsibilities = models.TextField(
         verbose_name="Responsabilidades",
         help_text="Escribir una lista breve en texto.",
@@ -71,7 +72,8 @@ class Experience(models.Model):
         blank=True,
         verbose_name="Herramientas relacionadas",
     )
-    order = models.PositiveIntegerField(default=0, verbose_name="Orden de aparición")
+    order = models.PositiveIntegerField(
+        default=0, verbose_name="Orden de aparición")
 
     class Meta:
         ordering = ["order"]
@@ -87,7 +89,8 @@ class Education(models.Model):
     title = models.CharField(max_length=200, verbose_name="Título o curso")
     period = models.CharField(max_length=100, verbose_name="Período")
     details = models.TextField(blank=True, verbose_name="Detalle adicional")
-    order = models.PositiveIntegerField(default=0, verbose_name="Orden de aparición")
+    order = models.PositiveIntegerField(
+        default=0, verbose_name="Orden de aparición")
 
     class Meta:
         ordering = ["order"]
@@ -113,7 +116,8 @@ class Skill(models.Model):
         default="qa",
         verbose_name="Categoría",
     )
-    order = models.PositiveIntegerField(default=0, verbose_name="Orden de aparición")
+    order = models.PositiveIntegerField(
+        default=0, verbose_name="Orden de aparición")
 
     class Meta:
         ordering = ["category", "order", "name"]
@@ -153,7 +157,8 @@ class Project(models.Model):
     )
     github_url = models.URLField(blank=True, null=True, verbose_name="GitHub")
     demo_url = models.URLField(blank=True, null=True, verbose_name="Demo")
-    order = models.PositiveIntegerField(default=0, verbose_name="Orden de aparición")
+    order = models.PositiveIntegerField(
+        default=0, verbose_name="Orden de aparición")
 
     class Meta:
         ordering = ["order"]
