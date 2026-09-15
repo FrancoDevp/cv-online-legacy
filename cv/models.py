@@ -167,5 +167,4 @@ class Project(models.Model):
 
 
 def get_page_title():
-    site_config = SiteConfig.objects.first()
-    return site_config.page_title if site_config else "Franco Irusta | IT Support & QA Manual"
+    return "Franco B. Irusta | Soporte IT & QA Manual"
