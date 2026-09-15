@@ -57,4 +57,3 @@ Este proyecto es de uso personal y portfolio profesional. Puedes adaptarlo o reu
 - Email: franco.cantonati.99@gmail.com
 - LinkedIn: https://www.linkedin.com/in/fb-irusta/
 - GitHub: https://github.com/FrancoDevp
-
