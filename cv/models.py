@@ -1,16 +1,13 @@
 from django.db import models
+from django.utils.html import format_html
+from django.utils.safestring import mark_safe
 
 
 class SiteConfig(models.Model):
     site_name = models.CharField(
         max_length=120,
-        default="Franco Irusta",
+        default="CV - Franco B. Irusta",
         verbose_name="Nombre del sitio",
-    )
-    page_title = models.CharField(
-        max_length=200,
-        default="Franco Irusta | IT Support & QA Manual",
-        verbose_name="Título de la página",
     )
     meta_description = models.TextField(
         default="CV profesional de Franco Irusta, enfocado en IT Support y QA Manual.",
@@ -167,3 +164,8 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+
+def get_page_title():
+    site_config = SiteConfig.objects.first()
+    return site_config.page_title if site_config else "Franco Irusta | IT Support & QA Manual"
