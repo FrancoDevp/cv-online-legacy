@@ -28,13 +28,11 @@ La estructura está organizada para que el contenido pueda gestionarse de forma 
 
 ```text
 CV - ONLINE/
-├── .env
 ├── .env.example
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
 ├── manage.py
-├── db.sqlite3
 ├── config/
 │   ├── __init__.py
 │   ├── settings.py
@@ -62,8 +60,28 @@ CV - ONLINE/
 │   ├── base.html
 │   └── cv/
 │       └── home.html
-└── .venv/
 ```
+
+Los archivos locales `.env`, `db.sqlite3` y `.venv/` no se publican en GitHub porque están excluidos mediante `.gitignore`.
+
+## Requisitos previos
+
+- Python 3.10 o superior
+- Git
+- Entorno virtual opcional pero recomendado
+
+## Gestión del contenido
+
+La información del CV puede modificarse desde Django Admin, incluyendo:
+
+- configuración general del sitio
+- email, teléfono y ubicación
+- enlaces a LinkedIn y GitHub
+- experiencia laboral
+- formación académica
+- habilidades
+- proyectos
+- archivos PDF descargables
 
 ## Licencia
 
