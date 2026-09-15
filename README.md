@@ -9,20 +9,6 @@ Este proyecto fue diseñado como una CV web personal orientado a perfiles de:
 - IT Support
 - QA Manual
 - Soporte funcional y técnico
-- Desarrollo y automatización
-
-La estructura está organizada para que el contenido pueda gestionarse de forma sencilla desde Django Admin, sin necesidad de editar el HTML cada vez que se quiere actualizar la información profesional.
-
-## Stack tecnológico
-
-- Python 3.12
-- Django 5
-- SQLite
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
 
 ## Estructura del proyecto
 
@@ -61,27 +47,6 @@ CV - ONLINE/
 │   └── cv/
 │       └── home.html
 ```
-
-Los archivos locales `.env`, `db.sqlite3` y `.venv/` no se publican en GitHub porque están excluidos mediante `.gitignore`.
-
-## Requisitos previos
-
-- Python 3.10 o superior
-- Git
-- Entorno virtual opcional pero recomendado
-
-## Gestión del contenido
-
-La información del CV puede modificarse desde Django Admin, incluyendo:
-
-- configuración general del sitio
-- email, teléfono y ubicación
-- enlaces a LinkedIn y GitHub
-- experiencia laboral
-- formación académica
-- habilidades
-- proyectos
-- archivos PDF descargables
 
 ## Licencia
 
